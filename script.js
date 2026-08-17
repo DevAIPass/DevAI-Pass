@@ -40,6 +40,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize Sticky Bottom Bar Scroll Trigger
     initStickyBar();
+
+    // Initialize Contact Form AJAX submission
+    initContactForm();
 });
 
 /* --- Auth Modal & Cashfree Checkout Controller --- */
@@ -560,6 +563,64 @@ function initStickyBar() {
             stickyBar.classList.add('visible');
         } else {
             stickyBar.classList.remove('visible');
+        }
+    });
+}
+
+/* --- Web3Forms Contact Form AJAX Handler --- */
+function initContactForm() {
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('contact-submit-btn');
+    const statusMsg = document.getElementById('contact-status-msg');
+
+    if (!contactForm) return;
+
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `<span>Sending Message...</span> <i data-lucide="loader-2" class="spin-icon"></i>`;
+            if (typeof lucide !== 'undefined' && lucide.createIcons) lucide.createIcons();
+        }
+
+        if (statusMsg) {
+            statusMsg.className = 'form-status-message';
+            statusMsg.style.display = 'none';
+        }
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                if (statusMsg) {
+                    statusMsg.className = 'form-status-message success';
+                    statusMsg.innerHTML = '🎉 Thank you! Your message has been sent successfully. Our support team will reply shortly.';
+                    statusMsg.style.display = 'block';
+                }
+                contactForm.reset();
+            } else {
+                throw new Error(data.message || 'Something went wrong');
+            }
+        } catch (error) {
+            if (statusMsg) {
+                statusMsg.className = 'form-status-message error';
+                statusMsg.innerHTML = '⚠️ Could not send message. Please try again or contact support on WhatsApp.';
+                statusMsg.style.display = 'block';
+            }
+        } finally {
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = `<span>Send Message</span> <i data-lucide="send"></i>`;
+                if (typeof lucide !== 'undefined' && lucide.createIcons) lucide.createIcons();
+            }
         }
     });
 }

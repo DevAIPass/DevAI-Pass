@@ -71,10 +71,11 @@
 
             <nav class="nav-links">
                 <a href="#tools">AI Tools</a>
-                <a href="#calculator">Savings Calculator</a>
-                <a href="#pricing">Subscription Plans</a>
+                <a href="#calculator">Calculator</a>
+                <a href="#pricing">Plans</a>
                 <a href="#reviews">Reviews</a>
                 <a href="#faq">FAQ</a>
+                <a href="#contact">Contact</a>
             </nav>
 
             <div class="header-actions">
@@ -824,6 +825,101 @@
         </div>
     </section>
 
+    <!-- Contact Us Section -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header text-center">
+                <div class="badge-pill">
+                    <i data-lucide="message-square" class="badge-pill-icon"></i>
+                    <span>WE'RE HERE TO HELP</span>
+                </div>
+                <h2 class="section-title">
+                    Have Questions? <span class="gradient-text">Contact Our Support Team</span>
+                </h2>
+                <p class="section-subtitle">
+                    Have questions about DevAI Pass, custom team subscriptions, or instant activation? Send us a message and we'll reply within 30 minutes!
+                </p>
+            </div>
+
+            <div class="contact-grid">
+                <!-- Left: Support Info Cards -->
+                <div class="contact-info-wrapper">
+                    <div class="contact-card info-card">
+                        <div class="contact-icon-box cyan">
+                            <i data-lucide="zap"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h4>Lightning Fast Support</h4>
+                            <p>Our dedicated technical team responds in less than 30 minutes during active business hours.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card info-card">
+                        <div class="contact-icon-box indigo">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h4>100% Privacy Guaranteed</h4>
+                            <p>Your name and email address are strictly private and encrypted. Zero spam, ever.</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card info-card">
+                        <div class="contact-icon-box emerald">
+                            <i data-lucide="headset"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h4>24/7 Account & Setup Help</h4>
+                            <p>Need help configuring Cursor, Claude, or ChatGPT Pro? We provide 1-on-1 walkthrough guidance.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Web3Forms Contact Form -->
+                <div class="contact-form-wrapper">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contact-form">
+                        <!-- Hidden Web3Forms Access Key -->
+                        <input type="hidden" name="access_key" value="0e733c57-356a-47ff-9c40-ac5abf868fcc">
+                        <!-- Optional subject & metadata -->
+                        <input type="hidden" name="subject" value="New DevAI Pass Support Inquiry">
+                        <input type="hidden" name="from_name" value="DevAI Pass Website Contact Form">
+
+                        <div class="form-group">
+                            <label for="contact-name" class="form-label">
+                                <i data-lucide="user"></i>
+                                <span>Full Name</span>
+                            </label>
+                            <input type="text" id="contact-name" name="name" class="form-input" placeholder="e.g. Rahul Sharma" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-email" class="form-label">
+                                <i data-lucide="mail"></i>
+                                <span>Email Address</span>
+                            </label>
+                            <input type="email" id="contact-email" name="email" class="form-input" placeholder="e.g. rahul@company.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message" class="form-label">
+                                <i data-lucide="message-square"></i>
+                                <span>Your Message</span>
+                            </label>
+                            <textarea id="contact-message" name="message" class="form-textarea" rows="4" placeholder="How can we help you today? Ask us anything..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-hero btn-shine contact-submit-btn" id="contact-submit-btn">
+                            <span>Send Message</span>
+                            <i data-lucide="send"></i>
+                        </button>
+
+                        <div class="form-status-message" id="contact-status-msg"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Bottom Conversion CTA & Sticky Bar -->
     <section class="final-cta-section">
         <div class="container">
@@ -856,6 +952,7 @@
                 <a href="#calculator">Savings Calculator</a>
                 <a href="#reviews">User Reviews</a>
                 <a href="#faq">FAQ</a>
+                <a href="#contact">Contact Support</a>
             </div>
 
             <div class="footer-security">
