@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Received & Priority Review | Pro Creator Pack - DevAI Pass</title>
+    <meta name="description" content="Thank you for purchasing the Pro Creator Pack (₹3,999/mo). Your payment and priority account activation are currently under review. Our team will connect with you shortly.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="thankyou-page-body">
+
+    <!-- Header Navigation -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 17L12 22L22 17" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M2 12L12 17L22 12" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <defs>
+                            <linearGradient id="logo-grad" x1="2" y1="2" x2="22" y2="22" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#4F46E5"/>
+                                <stop offset="1" stop-color="#9333EA"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text">DevAI<span class="logo-accent">Pass</span></span>
+            </a>
+
+            <div class="header-actions">
+                <a href="index.html" class="btn btn-outline btn-sm">
+                    <i data-lucide="arrow-left"></i>
+                    <span>Back to Home</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Thank You / Redirection Content -->
+    <section class="thankyou-section">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-mesh"></div>
+
+        <div class="thankyou-card">
+            <div class="thankyou-card-header">
+                <div class="thankyou-badge-header">
+                    <span class="pulse-dot-green"></span>
+                    <span>Priority Cashfree Checkout Confirmed</span>
+                </div>
+                <h1 class="thankyou-title">Thank You for Purchasing the <span class="gradient-text">Pro Creator Pack</span>!</h1>
+                <p class="thankyou-subtitle">Your payment and priority account activation are currently under review. Our senior setup desk will connect with you shortly.</p>
+            </div>
+
+            <div class="thankyou-grid">
+                <!-- Left Column -->
+                <div class="thankyou-grid-col">
+                    <!-- Status Alert Box -->
+                    <div class="review-alert-box">
+                        <i data-lucide="zap" class="review-alert-icon" style="color: #D97706;"></i>
+                        <div class="review-alert-text">
+                            <strong>Priority Account Activation Under Review:</strong> As a Pro Creator subscriber, your order is placed in our fast-track setup queue. Your login credentials and pass access instructions will be delivered to your registered email and WhatsApp.
+                        </div>
+                    </div>
+
+                    <!-- Order Details Grid -->
+                    <div class="order-summary-box">
+                        <div class="order-info-item">
+                            <span class="order-info-label">Selected Plan</span>
+                            <span class="order-info-value" style="color: var(--accent-purple);">Pro Creator Pack (₹3,999/mo)</span>
+                        </div>
+                        <div class="order-info-item">
+                            <span class="order-info-label">Payment Status</span>
+                            <span class="order-info-value" style="color: #059669;">✅ Confirmed via Cashfree</span>
+                        </div>
+                        <div class="order-info-item">
+                            <span class="order-info-label">Reference ID</span>
+                            <span class="order-info-value" id="ref-id">DEV-PRCR-93104</span>
+                        </div>
+                        <div class="order-info-item">
+                            <span class="order-info-label">Queue Priority</span>
+                            <span class="order-info-value">🔥 High Priority Fast-Track</span>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="thankyou-actions">
+                        <a href="index.html" class="btn btn-primary btn-block">
+                            <span>Return to Home Page</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="thankyou-grid-col">
+                    <!-- Activation Steps Timeline -->
+                    <div class="activation-timeline">
+                        <div class="timeline-step">
+                            <div class="step-icon done">✓</div>
+                            <div class="step-content">
+                                <div class="step-title">1. Payment Processed</div>
+                                <div class="step-desc">Cashfree ₹3,999 transaction verified successfully.</div>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-icon active">⚡</div>
+                            <div class="step-content">
+                                <div class="step-title">2. Priority Setup & Server Routing (In Progress)</div>
+                                <div class="step-desc">Provisioning Cursor, Claude, ChatGPT, Lovable Business & Bolt.new.</div>
+                            </div>
+                        </div>
+                        <div class="timeline-step">
+                            <div class="step-icon pending">📲</div>
+                            <div class="step-content">
+                                <div class="step-title">3. WhatsApp & Email Dispatch</div>
+                                <div class="step-desc">Priority credential bundle sent to your mobile & inbox.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Included Tools Tag List -->
+                    <div class="included-tools-section">
+                        <div class="included-tools-title">Your Pro Creator Suite Includes:</div>
+                        <div class="included-tools-tags">
+                            <span class="tool-tag"><i data-lucide="sparkles"></i> Lovable Business ($50/mo)</span>
+                            <span class="tool-tag"><i data-lucide="zap"></i> Bolt.new Pro ($25/mo)</span>
+                            <span class="tool-tag"><i data-lucide="code-2"></i> Cursor Pro+ ($60/mo)</span>
+                            <span class="tool-tag"><i data-lucide="bot"></i> Claude Max ($100/mo)</span>
+                            <span class="tool-tag"><i data-lucide="sparkles"></i> ChatGPT Pro (₹10,699/mo)</span>
+                            <span class="tool-tag"><i data-lucide="user-check"></i> 1-on-1 Setup Support</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) lucide.createIcons();
+
+            // Check URL for order ID parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            const orderId = urlParams.get('order_id') || urlParams.get('reference_id') || urlParams.get('cf_payment_id');
+            if (orderId) {
+                const refElem = document.getElementById('ref-id');
+                if (refElem) refElem.textContent = orderId;
+            }
+
+            // Simple reveal animation
+            if (window.gsap) {
+                gsap.fromTo('.thankyou-card', { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' });
+            }
+        });
+    </script>
+</body>
+</html>
